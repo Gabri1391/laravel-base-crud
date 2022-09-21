@@ -1,10 +1,11 @@
 <?php
 
+
 use Illuminate\Database\Seeder;
 use App\Models\Comic;
 
 
-class ComicTableSeader extends Seeder
+class ComicTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,12 +18,12 @@ class ComicTableSeader extends Seeder
 
         foreach($comics as $comic){
             $new_comic = new Comic();
-            $new_comic->title = $new_comic['title'];
-            $new_comic->description = $new_comic['description'];
-            $new_comic->thumb = $new_comic['thumb'];
-            $new_comic->price = $new_comic['price'];
-            $new_comic->series = $new_comic['series'];
-            $new_comic->type = $new_comic['type'];
+            $new_comic->title = $comic['title'];
+            $new_comic->description = $comic['description'];
+            $new_comic->thumb = $comic['thumb'];
+            $new_comic->price = $comic['price'];
+            $new_comic->series = $comic['series'];
+            $new_comic->type = $comic['type'];
 
             $new_comic->save();
         }

@@ -1,0 +1,52 @@
+.banner{
+    background-color: black;
+   .card-box{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+    .comics-card{
+       flex-basis: calc(100% / 6 - 10px);
+       padding: 0 5px;
+   
+       img{
+           display: block;
+           max-width: 100%;
+           height: auto;
+       }
+   
+       figcaption{
+           color: white;
+           text-align: center;
+       }
+    }
+   }
+   
+   .button-load{
+    margin: 0 auto;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #0282F9;
+    position: relative;
+    bottom: 20px;
+    a{
+        color: white;
+    }
+   }
+
+ }
+
+ .bottom-banner{
+    height: 150px;
+    background-color: #0282F9;
+
+
+    ul{
+        display: flex;
+        justify-content: center;
+        line-height: 150px;
+    }
+
+ }
