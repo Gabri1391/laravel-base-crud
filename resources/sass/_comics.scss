@@ -1,0 +1,62 @@
+.blue-banner{
+
+    height: 50px;
+    background-color: #0282F9;
+    position: relative;
+
+    img{
+        position: absolute;
+        left: 300px;
+        bottom: 20px;
+        width: 120px;
+    }
+}
+
+.card-details{
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 80px;
+    padding-bottom: 100px;
+  
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        #price{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            line-height: 50px;
+            background-color: #55BA59;
+            margin: 5px 0;
+
+            p{
+                color: #B0FB93;
+            }
+
+        }
+
+        .description{
+            flex-basis: 50%;
+
+            h3{
+                color: #003F5E;
+                font-weight: bold;
+                font-size: 2rem;
+                padding-bottom: 10px;
+            }
+            
+        }
+    }
+
+}
+
+.talent-specs{
+    height: 500px;
+    background-color: #f6f6f6;
+}
+
+
+
+

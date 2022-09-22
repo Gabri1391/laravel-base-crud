@@ -8,7 +8,7 @@ $links = config('header_navbar');
     </figure>
     <ul>
         @foreach ($links as $link)
-            <li><a class="text-secondary" href="#">{{strtoupper($link['text'])}}</a></li>
+            <li><a class="text-secondary" href="{{ route('comics.index')}}">{{strtoupper($link['text'])}}</a></li>
         @endforeach
     </ul>
 </header>
