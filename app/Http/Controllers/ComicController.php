@@ -35,8 +35,25 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        // Trasformo la request in un array associativo
+        $data = $request->all();
+
+        // creo nuova istanza
+        $comic = new Comic();
+        
+        // Riempio gli attributi
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->type = $data['type'];
+        
+        // Salvo
+        $comic->save();
+
+        // Reindirizzo
+        return redirect()->route('comics.index');
     }
 
     /**
