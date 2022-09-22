@@ -19,6 +19,7 @@
             <p>{{ $comic->type }}</p>
             <p>{{ $comic->price }}</p>
             <p>{{ $comic->sale_date }}</p>
+            <a class="btn btn-info btn-sm text-white" href="{{ route('comics.edit', $comic->id)}}">EDIT COMIC</a>
         </div>
     @empty
         <h2>No Comics found</h2>
@@ -27,7 +28,7 @@
     </div>
     <div class="mt-5 text-center pb-3">
         <a class="btn btn-primary text-white ms-2" href="#">LOAD MORE</a>
-        <a class="btn btn-success text-white" href="{{ route('comics.create')}}">CREA UN COMIC</a>
+        <a class="btn btn-success text-white" href="{{ route('comics.create', $comic->id)}}">CREATE NEW COMIC</a>
     </div>
 </section>
 
