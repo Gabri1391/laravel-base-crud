@@ -22,6 +22,10 @@
             <img src="{{ asset('/img/adv.jpg') }}" alt="advertising">
         </figure>
     </div>
+    <div class="card-footer d-flex justify-content-end align-items-center pb-3">
+        <a class="btn btn-secondary me-2" href="{{ route('comics.index')}}">GO BACK</a>
+        <a class="btn btn-info text-white" href="{{ route('comics.edit', $comic->id)}}">EDIT COMIC</a>
+    </div>
 </section>
 
 @endsection
