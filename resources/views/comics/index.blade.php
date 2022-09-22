@@ -7,18 +7,23 @@
 
 <section class="banner bg-dark">
     <div class="card-box d-flex flex-wrap container">
-        @foreach ($comics as $comic)
-        <div class="comics-card pt-5">
-            <a href="{{ route('comics.show', $comic)}}">
-                <figure class="text-center">
-                    <img src="{{ asset ($comic['thumb']) }}" alt="">
-                </figure>
+        @forelse($comics as $comic)
+        <div class="col-3 text-center align-items-center my-4 text-white">
+            <a href="{{ route('comics.show', $comic->id) }}">
+                <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="comics">
             </a>
-            <figcaption>
-            <p style="width: 150px;" class="text-white">{{ strtoupper($comic['title']) }}</p>
-            </figcaption>
+            <strong>
+                <p class="mt-4">{{ $comic->series }}</p>
+            </strong>
+            <p>{{ $comic->title }}</p>
+            <p>{{ $comic->type }}</p>
+            <p>{{ $comic->price }}</p>
+            <p>{{ $comic->sale_date }}</p>
         </div>
-        @endforeach
+    @empty
+        <h2>No Comics found</h2>
+    @endforelse
+</div>
     </div>
     <div class="mt-5 text-center pb-3">
         <a class="btn btn-primary text-white ms-2" href="#">LOAD MORE</a>
