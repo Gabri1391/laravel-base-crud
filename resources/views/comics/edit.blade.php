@@ -4,8 +4,9 @@
 
 @section('content')
 
-<form action="{{ route('comics.store') }}" method="POST">
+<form action="{{ route('comics.update', $comic->id) }}" method="POST">
     @csrf
+    @method('PUT')
     <div class="card-title mt-5">
         <h1 class="text-center mb-3">Create here your custom Comic</h1>
     </div>
